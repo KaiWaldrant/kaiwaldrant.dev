@@ -1,9 +1,15 @@
 import Image from "next/image";
+import Logo from "./ui/logo/logo";
+import LogoBig from "@/public/logo_big.svg";
+import NavBar from "./ui/components/navbar";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <NavBar />
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <Logo />
+        <Image src={LogoBig} alt="Big Logo" />
         <Image
           className="dark:invert"
           src="/next.svg"
