@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --background: oklch(0.9851 0 0);
+  --background-secondary: oklch(0.9683 0.0069 247.9);
+  --surface-cards: oklch(1 0 0);
+  --text-primary: oklch(0.2103 0.0059 285.89);
+  --text-secondary: oklch(0.4419 0.0146 285.79);
+  --border: oklch(0.9276 0.0058 264.53);
+  --primary-accent: oklch(0.7137 0.1434 254.62);
+  --primary-hover: oklch(0.6231 0.188 259.81);
+  --secondary-accent: oklch(0.7116 0.1812 22.84);
+  --secondary-hover: oklch(0.645 0.2154 16.44);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
 }
@@ -23,4 +29,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*main grid layout*/
+.content-grid {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(1184px, 100% - var(--gap) * 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [content-start] var(--content) [content-end]
+    var(--full) [full-end];
+}
+
+.content-grid > * {
+  grid-column: content;
+}
+
+.full {
+  grid-column: full;
 }
