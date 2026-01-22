@@ -6,11 +6,11 @@ import ThemeToggle from "./theme-toggle";
 
 export default function NavBar() {
   return (
-    <header className="sticky content-grid ">
-      <nav className="flex items-center w-full">
-        <div className="flex justify-between w-296">
-          <Image className="md:hidden" src={Logo} alt="Logo" />
-          <Image className="hidden md:block h-8" src={LogoBig} alt="Logo" />
+    <header className="sticky top-0 bg-surface-cards content-grid w-full h-18">
+      <nav className="flex items-center w-full  justify-between">
+        <Image className="md:hidden" src={Logo} alt="Logo" />
+        <Image className="hidden md:block h-8" src={LogoBig} alt="Logo" />
+        <div className="flex gap-8">
           <NavLinks />
           <ThemeToggle />
         </div>

@@ -10,12 +10,12 @@ const links = [
 
 export default function NavLinks() {
   return (
-    <>
+    <div className="flex items-center gap-8">
       {links.map((link) => (
         <Link key={link.name} href={link.href}>
           <p>{link.name}</p>
         </Link>
       ))}
-    </>
+    </div>
   );
 }
