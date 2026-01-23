@@ -6,13 +6,19 @@ import { useTheme } from "next-themes";
 
 import { Button } from "./button";
 
-export default function ThemeToggle() {
+import { cn } from "@/app/lib/utils";
+
+interface ThemeToggleProps {
+  className?: string;
+}
+
+export default function ThemeToggle({ className }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
   return (
     <Button
-      className="bg-transparent border-border"
+      className={cn("bg-transparent border-border", className)}
       variant="outline"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}

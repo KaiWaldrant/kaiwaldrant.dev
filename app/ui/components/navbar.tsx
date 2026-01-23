@@ -1,18 +1,54 @@
+"use client";
 import NavLinks from "./nav-links";
 import Logo from "@/public/logo.svg";
 import LogoBig from "@/public/logo_big.svg";
 import Image from "next/image";
 import ThemeToggle from "./theme-toggle";
+import MenuButton from "./menu-button";
+import { useState } from "react";
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 bg-surface-cards content-grid w-full h-18">
-      <nav className="flex items-center w-full  justify-between">
-        <Image className="md:hidden" src={Logo} alt="Logo" />
-        <Image className="hidden md:block h-8" src={LogoBig} alt="Logo" />
-        <div className="flex gap-8">
-          <NavLinks />
-          <ThemeToggle />
+      <nav className="md:items-center flex">
+        {/*Desktop*/}
+        <div className=" hidden md:flex w-full h-8 justify-between">
+          <Image className="hidden md:block w-auto" src={LogoBig} alt="Logo" />
+          <div className="flex gap-8">
+            <NavLinks />
+            <ThemeToggle />
+          </div>
+        </div>
+        {/*Mobile*/}
+        <div className="flex flex-col w-full md:hidden my-4">
+          <div className="flex justify-between w-full h-10">
+            <Image className="md:hidden w-auto" src={Logo} alt="Logo" />
+            <div className="flex gap-4">
+              <ThemeToggle className="size-10" />
+              <MenuButton
+                className="size-10"
+                isOpen={isMenuOpen}
+                setIsOpen={setIsMenuOpen}
+              />
+            </div>
+          </div>
+
+          {/* Mobile menu (slides down when open) */}
+          <div
+            className={`
+            overflow-hidden transition-all duration-300 ease-in-out
+            ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+          `}
+          >
+            <div className="flex flex-col bg-surface-cards py-6">
+              <NavLinks
+                className="flex-col gap-6"
+                onClick={() => setIsMenuOpen(false)}
+              />
+            </div>
+          </div>
         </div>
       </nav>
     </header>
