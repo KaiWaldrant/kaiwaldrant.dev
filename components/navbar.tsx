@@ -10,10 +10,10 @@ import Link from "next/link";
 
 function NavLogo() {
   return (
-    <>
+    <Link key="Logo" href="#" className="flex items-center w-100">
       <Image className="lg:hidden h-10 w-auto" src={Logo} alt="Logo" />
       <Image className="lg:block hidden h-8 w-auto" src={LogoBig} alt="Logo" />
-    </>
+    </Link>
   );
 }
 
@@ -25,9 +25,7 @@ export default function NavBar() {
       <nav className="md:items-center flex">
         {/*Desktop*/}
         <div className=" hidden md:flex w-full h-8 justify-between">
-          <Link key="Logo" href="/" className="flex items-center w-100">
-            <NavLogo />
-          </Link>
+          <NavLogo />
           <div className="flex gap-8">
             <NavLinks />
             <ThemeToggle />
