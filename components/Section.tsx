@@ -15,7 +15,7 @@ export default function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className={cn("content-grid full", className)} {...props}>
+    <section className={cn("content-grid full my-24", className)} {...props}>
       {container ? (
         <div className={cn("", containerClassName)}>{children}</div>
       ) : (
