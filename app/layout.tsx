@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { inter, spaceMono } from "./ui/fonts";
+import { inter, spaceMono } from "@/components/fonts";
 import "./globals.css";
-import { ThemeProvider } from "./ui/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title:

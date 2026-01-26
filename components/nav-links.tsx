@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
 
 const links = [
   { name: "Home", href: "/" },
