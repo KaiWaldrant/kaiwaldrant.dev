@@ -15,7 +15,10 @@ export default function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className={cn("content-grid full py-12", className)} {...props}>
+    <section
+      className={cn("content-grid full py-12 h-fit", className)}
+      {...props}
+    >
       {container ? (
         <div className={cn("", containerClassName)}>{children}</div>
       ) : (
