@@ -34,7 +34,9 @@ export default function Skills() {
   return (
     <Section containerClassName="grid gap-12">
       <div className="text-center">
-        <h2 className="font-mono text-4xl mb-4 text-center">Skills</h2>
+        <h2 className="font-mono font-bold text-4xl mb-4 text-center">
+          Skills
+        </h2>
         <p className="text-text-secondary text-md">
           I bring a unique combination: modern web development skills backed by
           years of data analysis and scientific computing experience.

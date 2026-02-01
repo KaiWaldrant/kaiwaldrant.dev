@@ -7,7 +7,7 @@ export default function About() {
       className="text-center"
       containerClassName="grid gap-12"
     >
-      <h2 className="font-mono text-4xl">About me</h2>
+      <h2 className="font-mono text-4xl font-bold">About me</h2>
       <div>
         <p className="md:text-lg">
           As a passionate Bioinformatician and Web Developer, I thrive at the
