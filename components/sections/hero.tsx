@@ -1,10 +1,11 @@
 import Section from "../section";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <Section containerClassName="max-md:grid md:flex gap-8 items-center h-fit justify-between">
+    <Section id="" containerClassName="max-md:grid md:flex gap-8 items-center h-fit justify-between">
       <div className="flex flex-col gap-4 max-w-125">
         <h1 className="font-mono font-bold text-6xl text-text-primary max-w-74">
           Kai Waldrant
@@ -13,8 +14,8 @@ export default function Hero() {
           Bridging Biology & Technology with Data-Driven Solutions
         </p>
         <div className="flex">
-          <Button>View Projects</Button>
-          <Button>Résumé</Button>
+          <Button asChild variant="link"><Link href="#projects">View Projects</Link></Button>
+          <Button asChild variant="link"><Link href="/resume.pdf">Résumé</Link></Button>
         </div>
       </div>
       <div className="">
