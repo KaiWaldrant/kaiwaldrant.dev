@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SkillBadge from "@/components/skillBadge";
+import SkillBadge from "@/components/skill-badge";
 
 type SkillCardProps = {
   title: string;

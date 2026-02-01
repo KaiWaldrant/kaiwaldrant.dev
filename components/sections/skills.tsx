@@ -1,5 +1,5 @@
-import Section from "../Section";
-import SkillCard from "../SkillCard";
+import Section from "../section";
+import SkillCard from "../skill-card";
 
 const devStack = [
   "TypeScript",
