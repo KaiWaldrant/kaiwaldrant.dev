@@ -7,8 +7,8 @@ import LinkedinIcon from "./icons/icon-linkedin";
 
 export default function Footer() {
     return(
-        <footer className="content-grid bg-surface-cards h-18">
-            <div className="flex justify-between align-center">
+        <footer className="content-grid bg-surface-cards h-48 max-sm:py-6 md:h-18">
+            <div className="flex max-sm:flex-col align-between justify-between md:align-center">
                 <Link key="Logo" href="#" className="flex items-center w-auto">
                     <Image className="h-6 w-auto" src={LogoBig} alt="Logo" />
                 </Link>
