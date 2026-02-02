@@ -32,7 +32,7 @@ const domains = [
 
 export default function Skills() {
   return (
-    <Section id="skills" className="bg-background-secondary" containerClassName="grid gap-12">
+    <Section id="skills" className="" containerClassName="grid gap-12 p-6 md:p-12 bg-background-secondary">
       <div className="text-center">
         <h2 className="font-mono font-bold text-4xl mb-4 text-center">
           Skills
