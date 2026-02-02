@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LinkedinIcon = ({
-  size = undefined,
+  size = "24",
   color = '#000000',
   strokeWidth = 2,
   background = 'transparent',
@@ -39,10 +39,9 @@ const LinkedinIcon = ({
         backgroundColor: background !== 'transparent' ? background : undefined
       }}
     >
-      <path fill="currentColor" d="M165 90q0 35-21 59t-62 24q-37 0-59-24T0 95q0-35 23-61T83 8t60 24t22 58M0 750h165V214H0zm560-528q-32 0-57 8t-45 21t-33 27t-21 27h-4l-9-70H243q0 34 2 74t2 86v355h165V457q0-12 1-22t3-19q4-11 11-23t16-21t22-16t29-6q44 0 64 32t19 83v285h165V445q0-57-14-99t-38-70t-58-41t-72-13"/>
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth={strokeWidth}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></g>
     </svg>
   );
 };
 
 export default LinkedinIcon;
-
