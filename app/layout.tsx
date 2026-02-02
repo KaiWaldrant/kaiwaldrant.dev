@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { inter, spaceMono } from "@/components/fonts";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import NavBar from "@/components/nav-bar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title:
@@ -25,7 +27,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NavBar />
+          <main>
+            {children}
+          </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
