@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <Section id="" containerClassName="max-md:grid md:flex gap-8 items-center h-fit justify-between">
+    <Section
+      id=""
+      containerClassName="max-md:grid md:flex gap-8 items-center h-fit justify-between"
+    >
       <div className="flex flex-col gap-4 max-w-125">
         <h1 className="font-mono font-bold text-6xl text-text-primary max-w-74">
           Kai Waldrant
@@ -13,9 +16,21 @@ export default function Hero() {
         <p className="text-text-secondary">
           Bridging Biology & Technology with Data-Driven Solutions
         </p>
-        <div className="flex">
-          <Button asChild variant="link"><Link href="#projects">View Projects</Link></Button>
-          <Button asChild variant="link"><Link href="/resume.pdf">Résumé</Link></Button>
+        <div className="flex gap-4">
+          <Button
+            asChild
+            className="bg-transparent border-primary-accent hover:bg-primary-hover text-primary-accent hover:text-text-primary"
+            variant="outline"
+          >
+            <Link href="#projects">View Projects</Link>
+          </Button>
+          <Button
+            asChild
+            className="bg-transparent border-primary-accent hover:bg-primary-hover text-primary-accent hover:text-text-primary"
+            variant="outline"
+          >
+            <Link href="/CV_Kai_Waldrant.pdf">Résumé</Link>
+          </Button>
         </div>
       </div>
       <div className="">
