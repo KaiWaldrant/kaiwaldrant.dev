@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 
 const MailIcon = ({
   size = "24",
-  color = '#000000',
+  color = "#000000",
   strokeWidth = 2,
-  background = 'transparent',
+  background = "transparent",
   opacity = 1,
   rotation = 0,
   shadow = 0,
   flipHorizontal = false,
   flipVertical = false,
-  padding = 0
+  padding = 0,
 }) => {
   const transforms = [];
   if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`);
-  if (flipHorizontal) transforms.push('scaleX(-1)');
-  if (flipVertical) transforms.push('scaleY(-1)');
+  if (flipHorizontal) transforms.push("scaleX(-1)");
+  if (flipVertical) transforms.push("scaleY(-1)");
 
-  const viewBoxSize = 24 + (padding * 2);
+  const viewBoxSize = 24 + padding * 2;
   const viewBoxOffset = -padding;
   const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`;
 
@@ -34,12 +34,24 @@ const MailIcon = ({
       strokeLinejoin="round"
       style={{
         opacity,
-        transform: transforms.join(' ') || undefined,
-        filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
-        backgroundColor: background !== 'transparent' ? background : undefined
+        transform: transforms.join(" ") || undefined,
+        filter:
+          shadow > 0
+            ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))`
+            : undefined,
+        backgroundColor: background !== "transparent" ? background : undefined,
       }}
     >
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth={strokeWidth}><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={strokeWidth}
+      >
+        <path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+        <rect width="20" height="16" x="2" y="4" rx="2" />
+      </g>
     </svg>
   );
 };
