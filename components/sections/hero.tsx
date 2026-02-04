@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <Section
-      id=""
+      id="top"
       containerClassName="max-md:grid md:flex gap-8 items-center h-fit justify-between"
     >
       <div className="flex flex-col gap-4 max-w-125">
@@ -19,14 +19,14 @@ export default function Hero() {
         <div className="flex gap-4">
           <Button
             asChild
-            className="bg-transparent border-primary-accent hover:bg-primary-hover text-primary-accent hover:text-text-primary"
+            className="bg-transparent border-secondary-accent hover:bg-secondary-hover text-secondary-accent hover:text-text-primary"
             variant="outline"
           >
             <Link href="#projects">View Projects</Link>
           </Button>
           <Button
             asChild
-            className="bg-transparent border-primary-accent hover:bg-primary-hover text-primary-accent hover:text-text-primary"
+            className="bg-transparent border-secondary-accent hover:bg-secondary-hover text-secondary-accent hover:text-text-primary"
             variant="outline"
           >
             <Link href="/CV_Kai_Waldrant.pdf">Résumé</Link>
