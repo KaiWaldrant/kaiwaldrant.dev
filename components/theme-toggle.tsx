@@ -18,7 +18,10 @@ export default function ThemeToggle({ className }: ThemeToggleProps) {
 
   return (
     <Button
-      className={cn("bg-transparent border-border", className)}
+      className={cn(
+        "bg-transparent border-border hover:bg-primary-hover cursor-pointer",
+        className,
+      )}
       variant="outline"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}
