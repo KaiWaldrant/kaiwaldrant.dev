@@ -17,7 +17,7 @@ export default function Projects() {
           title="Quiz app"
           description="Frontend Mentor project. Interactive Quiz app."
           image="/fem-quiz-thumb.jpg"
-          link="#"
+          link="https://github.com/KaiWaldrant/fem-quiz-app"
           skills={[
             "React",
             "Vite",
@@ -31,7 +31,7 @@ export default function Projects() {
           title="Password Generator"
           description="Frontend Mentor project. A simple password generator"
           image="/fem-pswgen-thumb.jpg"
-          link="#"
+          link="https://github.com/KaiWaldrant/fem-tip-calc-app"
           skills={["HTML", "CSS", "JavaScript", "Netlify"]}
         />
       </div>
